@@ -28,8 +28,6 @@ public class ResponseMapper {
 				getWeatherResponse.setPressure(weatherByZipResponse.getGetCityWeatherByZIPResult().getPressure());
 				getWeatherResponse.setState(weatherByZipResponse.getGetCityWeatherByZIPResult().getState());
 				getWeatherResponse.setTemperature(weatherByZipResponse.getGetCityWeatherByZIPResult().getTemperature());
-				
-			}else{
 				getWeatherResponse.setResponsetext(weatherByZipResponse.getGetCityWeatherByZIPResult().getResponseText());
 
 			}
