@@ -21,7 +21,7 @@ public class ResponseMapper {
 		if(!StringUtils.isEmpty(request.getZipCode()))
 		{
 			GetCityWeatherByZIPResponse weatherByZipResponse = weatherClient.getCityWeatherByZip(request.getZipCode());
-			if(weatherByZipResponse != null && weatherByZipResponse.getGetCityWeatherByZIPResult().isSuccess()){
+			if(weatherByZipResponse != null){
 				
 				getWeatherResponse.setCity(weatherByZipResponse.getGetCityWeatherByZIPResult().getCity());
 				getWeatherResponse.setHumidity(weatherByZipResponse.getGetCityWeatherByZIPResult().getRelativeHumidity());

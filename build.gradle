@@ -105,11 +105,12 @@ genJaxbProduce.mustRunAfter genJaxb
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-ws")
 	compile("org.springframework.ws:spring-ws-core")
+	compile('org.springframework.boot:spring-boot-starter-aop')
+	compile 'org.springframework:spring-aspects'
+	compile('org.springframework.boot:spring-boot-starter-cache')
 	compile(files(genJaxbProduce.classesDir).builtBy(genJaxbProduce))
     compile(files(genJaxb.classesDir).builtBy(genJaxb))
     compile("wsdl4j:wsdl4j:1.6.1")
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-	
 	jaxb "com.sun.xml.bind:jaxb-xjc:2.1.7"
 
 }
